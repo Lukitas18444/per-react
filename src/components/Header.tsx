@@ -1,4 +1,4 @@
-import { use, useState } from 'react'
+import { useState } from 'react'
 import '../css/header.css'
 export const Header = () => {
 
@@ -16,9 +16,14 @@ export const Header = () => {
         <h2>Prueba</h2>
             {
                 hamburguesa ? <i onClick={handleHamburguesa} className="fa-solid fa-bars"></i> : <i onClick={handleHamburguesa} className="fa-solid fa-x"></i>
-            }  
-
-        
+            } 
+         { 
+            hamburguesa ?  null : <nav className='Nav'>
+            <li>Inicio</li>
+            <li>Fotos</li>
+            <li>Contacto</li> 
+        </nav>
+        }   
     </div>
     
   )
